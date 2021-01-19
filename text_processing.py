@@ -43,7 +43,10 @@ def normalize(input_string):
             else:
                 normalized_string += letter
 
-    return normalized_string if normalized_string[-1] != ' ' else normalized_string[:len(normalized_string) - 1]
+    if normalized_string == '':
+        return ''
+    else:
+        return normalized_string if normalized_string[-1] != ' ' else normalized_string[:len(normalized_string) - 1]
 
 
 def no_vowels(input_string):
