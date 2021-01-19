@@ -37,11 +37,13 @@ def normalize(input_string):
     for letter in input_string:
         if letter.isalpha():
             normalized_string += letter.lower()
-        else:
+        elif letter == ' ':
             if len(normalized_string) == 0 or normalized_string[-1] == ' ':
                 continue
             else:
                 normalized_string += letter
+        else:
+            normalized_string += letter
 
     if normalized_string == '':
         return ''
