@@ -41,7 +41,7 @@ def normalize(input_string):
             if len(normalized_string) == 0 or normalized_string[-1] == ' ':
                 continue
             else:
-                normalized_string += ' '
+                normalized_string += letter
 
     return normalized_string if normalized_string[-1] != ' ' else normalized_string[:len(normalized_string) - 1]
 
